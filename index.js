@@ -5,11 +5,19 @@ function randomEntry() {
   return idNumbers[Math.floor(Math.random() * idNumbers.length)];
 }
 
-console.log(randomEntry());
+
 // Code your buildCrewArray function here:
-
-
-
+function buildCrewArray() {
+  let crewArray = [];
+  while (crewArray.length < 3) {
+    let newSelection = randomEntry();
+    while (crewArray.includes(newSelection)) {
+      newSelection = randomEntry();
+    };
+    crewArray.push(newSelection);
+  }
+  return crewArray;
+}
 
 // Here are the candidates and the 'animals' array:
 let candidateA = {
@@ -57,4 +65,8 @@ let candidateF = {
 
 let animals = [candidateA,candidateB,candidateC,candidateD,candidateE,candidateF];
 
+const crewIDs = buildCrewArray();
 // Code your template literal and console.log statements:
+function getCrewList(idList, astronautList) {
+  
+}
