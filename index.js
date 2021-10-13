@@ -68,5 +68,16 @@ let animals = [candidateA,candidateB,candidateC,candidateD,candidateE,candidateF
 const crewIDs = buildCrewArray();
 // Code your template literal and console.log statements:
 function getCrewList(idList, astronautList) {
-  
+  let crew = [];
+  for (let id of idList) {
+    for (let animal of astronautList) {
+      if (id === animal.astronautID) {
+        console.log(`Pushing id ${id} which matches ${animal.name}.`)
+        crew.push(animal);
+      }
+    }
+  }
+  return crew;
 }
+
+console.log(getCrewList(crewIDs, animals));
