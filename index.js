@@ -1,10 +1,15 @@
+let idNumbers = [291, 414, 503, 599, 796, 890];
+
 // Code your selectRandomEntry function here:
+function randomEntry() {
+  return idNumbers[Math.floor(Math.random() * idNumbers.length)];
+}
 
-
+console.log(randomEntry());
 // Code your buildCrewArray function here:
 
 
-let idNumbers = [291, 414, 503, 599, 796, 890];
+
 
 // Here are the candidates and the 'animals' array:
 let candidateA = {
