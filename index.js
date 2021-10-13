@@ -72,12 +72,11 @@ function getCrewList(idList, astronautList) {
   for (let id of idList) {
     for (let animal of astronautList) {
       if (id === animal.astronautID) {
-        console.log(`Pushing id ${id} which matches ${animal.name}.`)
         crew.push(animal);
       }
     }
   }
   return crew;
 }
-
-console.log(getCrewList(crewIDs, animals));
+const crew = getCrewList(crewIDs, animals);
+console.log(`${crew[0].name}, ${crew[1].name}, and ${crew[2].name} are going to space!`);
